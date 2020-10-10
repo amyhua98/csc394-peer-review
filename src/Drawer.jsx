@@ -22,6 +22,11 @@ const Drawer = props => {
   const classes = useStyles();
   const itemsList = [
     {
+      text: "Home",
+      icon: <InboxIcon />,
+      onClick: () => history.push("/")
+    },
+    {
       text: "Create Team",
       icon: <InboxIcon />,
       onClick: () => history.push("/Create-Team")

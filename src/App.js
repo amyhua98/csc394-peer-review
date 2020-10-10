@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import Home from "./Home";
 import CreateTeam from "./CreateTeam";
 import RateStudent from "./RateStudent";
 import RateTeam from "./RateTeam";
@@ -19,6 +20,7 @@ export default function App() {
     <div className={classes.container}>
       <Drawer />
       <Switch>
+      <Route exact path="/" render={props => <Home {...props} />} />
         <Route exact path="/Create-Team" render={props => <CreateTeam {...props} />} />
         <Route exact path="/Rate-Team" render={props => <RateTeam {...props} />} />
         <Route exact path="/Rate-Student" render={props => <RateStudent {...props} />} />

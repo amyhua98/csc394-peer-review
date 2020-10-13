@@ -1,7 +1,7 @@
 import React from "react";
 
 const createTeam = props => {
-  return <div>This is the Create Team page</div>;
+  return <div><h1>Create Teams</h1>This is the Create Team page</div>;
 };
 
 export default createTeam;

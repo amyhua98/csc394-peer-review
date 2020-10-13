@@ -7,9 +7,11 @@ import {
   ListItemText
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import { withRouter } from "react-router-dom";
+import HomeIcon from '@material-ui/icons/Home';
+import GroupIcon from '@material-ui/icons/Group';
+import RateReviewIcon from '@material-ui/icons/RateReview';
+import GradeIcon from '@material-ui/icons/Grade';
 
 const useStyles = makeStyles({
   drawer: {
@@ -23,22 +25,22 @@ const Drawer = props => {
   const itemsList = [
     {
       text: "Home",
-      icon: <InboxIcon />,
+      icon: <HomeIcon />,
       onClick: () => history.push("/")
     },
     {
       text: "Create Team",
-      icon: <InboxIcon />,
+      icon: <GroupIcon />,
       onClick: () => history.push("/Create-Team")
     },
     {
       text: "Rate Team",
-      icon: <MailIcon />,
+      icon: <RateReviewIcon />,
       onClick: () => history.push("/Rate-Team")
     },
     {
       text: "Rate Student",
-      icon: <MailIcon />,
+      icon: <GradeIcon />,
       onClick: () => history.push("/Rate-Student")
     }
   ];

@@ -8,17 +8,31 @@ import { Route, Switch } from "react-router-dom";
 import Drawer from "./Drawer";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
-  container: {
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
     display: "flex"
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+    overflow: 'auto'
   }
-});
+}));
 
 export default function App() {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <Drawer />
+    <div className={classes.root}>
+      <Drawer className={classes.drawer}
+        variant="permanent"
+        classes={{
+          paper: classes.drawerPaper,
+        }}/>
       <Switch>
       <Route exact path="/" render={props => <Home {...props} />} />
         <Route exact path="/Create-Team" render={props => <CreateTeam {...props} />} />
@@ -28,3 +42,4 @@ export default function App() {
     </div>
   );
 }
+

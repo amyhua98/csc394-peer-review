@@ -12,6 +12,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import GroupIcon from '@material-ui/icons/Group';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import GradeIcon from '@material-ui/icons/Grade';
+import AccountBoxRoundedIcon from '@material-ui/icons/AccountBoxRounded';
 
 const useStyles = makeStyles({
   drawer: {
@@ -42,7 +43,13 @@ const Drawer = props => {
       text: "Rate Student",
       icon: <GradeIcon />,
       onClick: () => history.push("/Rate-Student")
+    },
+    {
+      text: "Profile",
+      icon: <AccountBoxRoundedIcon />,
+      onClick: () => history.push("/Profile")
     }
+    
   ];
   return (
     <MUIDrawer variant="permanent" className={classes.drawer}>

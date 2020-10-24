@@ -4,6 +4,30 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+
+const teams = [
+  {
+    value: 'Team 1',
+    label: 'Team 1',
+  },
+  {
+    value: 'Team 2',
+    label: 'Team 2',
+  },
+  {
+    value: 'Team 3',
+    label: 'Team 3',
+  },
+  {
+    value: 'Team 4',
+    label: 'Team 4',
+  },
+];
+
+
 const rateTeam = () => {
   return <div>
   <h1 class="title">Rate Your Team</h1>
@@ -11,10 +35,10 @@ const rateTeam = () => {
     <ListItem >
       <ListItemText primary="Which Team are you rating?" />
       <select name="teams" id="teams">
-        <option value="volvo">Team 1</option>
-        <option value="saab">Team 2</option>
-        <option value="opel">Team 3</option>
-        <option value="audi">Team 4</option>
+        <option value="team1">Team 1</option>
+        <option value="team2">Team 2</option>
+        <option value="team3">Team 3</option>
+        <option value="team4">Team 4</option>
       </select>
     </ListItem>
     <Divider />

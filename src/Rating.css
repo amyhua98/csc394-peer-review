@@ -1,20 +1,15 @@
 .title{
     font-size: 50px;
+    padding-left: 50%;
   }
 
-.teamForm{
+.teamForm, .studentForm{
     margin: auto;
     width: 75%;
-    border: blue;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-}
-
-.commentBox{
-    max-width: 100%;
-    resize: vertical;
 }
 
 .stars {
@@ -51,5 +46,9 @@
 .stars > input:checked ~ label:hover ~ label,
 .stars > label:hover ~ input:checked ~ label {
     color: #c59b08;
+}
+.commentBox{
+    max-width: 100%;
+    resize: vertical;
 }
   

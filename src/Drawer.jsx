@@ -16,7 +16,22 @@ import AccountBoxRoundedIcon from '@material-ui/icons/AccountBoxRounded';
 
 const useStyles = makeStyles({
   drawer: {
-    width: "190px"
+    width: "185px"
+  },
+  drawerList: {
+    '& span': {
+      color: '#74dbac'
+    }
+  },
+  icon:{
+    '& svg ': {
+      fill: '#74dbac'
+    },
+  },
+  drawerBox: {
+    '& div:first-child ': {
+      minWidth: '35px'
+    },
   }
 });
 
@@ -57,9 +72,9 @@ const Drawer = props => {
         {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;
           return (
-            <ListItem button key={text} onClick={onClick}>
-              {icon && <ListItemIcon>{icon}</ListItemIcon>}
-              <ListItemText primary={text} />
+            <ListItem className={classes.drawerBox} button key={text} onClick={onClick}>
+              {icon && <ListItemIcon className={classes.icon}>{icon}</ListItemIcon>}
+              <ListItemText className={classes.drawerList} primary={text} />
             </ListItem>
           );
         })}

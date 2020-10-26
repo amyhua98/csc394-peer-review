@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import './Rating.css';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
@@ -50,7 +48,20 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   submit: {
-    background: '#007a50',
+    backgroundColor: '#ffffff',
+    color: '#000000',
+    "&:hover": {
+      backgroundColor: '#007a50',
+      color: '#ffffff',
+    }
+  },
+  teamForm: {
+    width: '75%'
+  },
+  textbox: {
+    "&:onClick": {
+      border: '#007a50',
+    }
   }
 });
 
@@ -62,9 +73,9 @@ export default function App() {
   const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
-  return <div>
-  <h2 class="title">Rate Your Team</h2>
-  <List class="teamForm" component="form" aria-label="questions">
+  return (<div className="div-wraps">
+  <h2 className="title">Rate Your Team</h2>
+  <List className={classes.teamForm} component="form" aria-label="questions">
     <ListItem >
       <ListItemText primary="Which Team are you rating?" />
       {/* <select name="Teams" id="Teams">
@@ -73,10 +84,9 @@ export default function App() {
         <option value="Team3">Team 3</option>
         <option value="Team4">Team 4</option>
       </select> */}
-      <TextField value={team} variant="outlined" onChange= {handleChange} margin="dense">
+      <TextField className={classes.textbox} value={team} variant="outlined" onChange= {handleChange} margin="dense">
       </TextField>
     </ListItem>
-    <Divider />
     <ListItem >
       <ListItemText primary="How was the work ethics of this Team?" />
       <div className={classes.root}>
@@ -98,7 +108,7 @@ export default function App() {
       <ListItemText primary="Comment below on anything you'd like to add:" />
     </ListItem>
     <ListItem >
-      <TextField variant="outlined" multiline rows={15} fullWidth={true} >
+      <TextField className={classes.textbox} variant="outlined" multiline rows={15} fullWidth={true} >
       </TextField>
     </ListItem>
     <ListItem>
@@ -109,7 +119,7 @@ export default function App() {
   </List>
   </div>
 
-  ;
+  );
 };
 
 

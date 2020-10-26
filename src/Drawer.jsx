@@ -20,12 +20,12 @@ const useStyles = makeStyles({
   },
   drawerList: {
     '& span': {
-      color: '#74dbac'
+      color: '#007a50'
     }
   },
   icon:{
     '& svg ': {
-      fill: '#74dbac'
+      fill: '#007a50'
     },
   },
   drawerBox: {

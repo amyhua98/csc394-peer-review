@@ -40,14 +40,14 @@ const useStyles = makeStyles({
   title: {
     fontSize: 56,
     textAlign: 'center',
-    color: '#74dbac',
+    color: '#007a50',
     marginTop: '40px',
     fontWeight: 'bold',
   },
   pos: {
     marginBottom: 12,
     textAlign: 'center',
-    color: '#6ad9a2',
+    color: '#007a50',
     fontWeight: '600',
   },
   members: {

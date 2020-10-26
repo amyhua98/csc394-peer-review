@@ -49,6 +49,9 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
   },
+  submit: {
+    background: '#007a50',
+  }
 });
 
 export default function App() {
@@ -60,7 +63,7 @@ export default function App() {
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
   return <div>
-  <h1 class="title">Rate Your Team</h1>
+  <h2 class="title">Rate Your Team</h2>
   <List class="teamForm" component="form" aria-label="questions">
     <ListItem >
       <ListItemText primary="Which Team are you rating?" />
@@ -99,7 +102,7 @@ export default function App() {
       </TextField>
     </ListItem>
     <ListItem>
-      <Button variant="contained" color="primary" disableElevation>
+      <Button className={classes.submit} variant="contained" color="primary" disableElevation>
         SUBMIT
       </Button>
     </ListItem>

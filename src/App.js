@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import "./App.css"
 import Home from "./Home";
 import CreateTeam from "./CreateTeam";
 import RateStudent from "./RateStudent";

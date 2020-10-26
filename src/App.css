@@ -33,3 +33,17 @@
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
 }
+
+
+.div-wraps{
+  width: 100%;
+  padding: 30px;
+}
+
+h2{
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: 2px solid rgbA(116,219,172, 1);
+  margin: 0;
+  color:#007a50;
+}

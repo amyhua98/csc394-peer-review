@@ -1,7 +1,11 @@
 import React from "react";
 
 const Home = props => {
-  return <div><h1>This is the Homepage.</h1>This is the content for the homepage</div>;
+  return (
+  <div className="div-wraps">
+  <h2 className="title">Home Page</h2>
+  </div>
+  );
 };
 
 export default Home;

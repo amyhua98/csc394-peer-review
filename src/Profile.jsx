@@ -1,13 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
+import CardContent from '@material-ui/core/CardContent';
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Badge from "@material-ui/core/Badge";
 import Rating from '@material-ui/lab/Rating';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 
 const useStyles = makeStyles({
@@ -28,8 +28,12 @@ const useStyles = makeStyles({
 
 export default function MediaCard() {
   const classes = useStyles();
+  const [value] = React.useState(4);
 
   return (
+  <div className="div-wraps">
+  <h2 className="title">Profile</h2>
+
     <Card elevation={4} className={classes.root}>
       <Grid item>
         <Box display="flex" justifyContent="center" bgcolor="background.paper">
@@ -51,26 +55,103 @@ export default function MediaCard() {
       <Grid item>
         <Box display="flex" justifyContent="center" bgcolor="background.paper">
           <Typography variant="h6" gutterBottom>
-            Full Name
+            First, Last Name
           </Typography>
         </Box>
       </Grid>
 
       <Grid item>
         <div>
-      <Box component="fieldset" mb={3} borderColor="transparent">
-        <Typography component="legend">Custom empty icon</Typography>
-        <Rating
-        name="customized-empty"
-        defaultValue={2}
-        precision={0.5}
-        emptyIcon={<StarBorderIcon fontSize="inherit" />}
-        />
-        </Box> 
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography component="legend">Overall Rating</Typography>
+            <Rating
+            name="read-only"
+            size="large"
+            value={value} readOnly
+            />
+          </Box>
         </div>
       </Grid>
 
     </Card>
+
+    <br />
+
+    <Card>
+    <CardContent className={classes.root} variant="outlined">
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          First, Last Name
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Team 2 Rating
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+        <Box component="fieldset" mb={3} borderColor="transparent">
+            <Rating
+            name="read-only"
+            size="large"
+            value={value} readOnly
+            />
+          </Box>
+        </Typography>
+        <Typography variant="body2" component="p">
+          This person is a great team player. 
+        </Typography>
+      </CardContent>
+    </Card>
+
+    <br />
+
+    <Card>
+    <CardContent className={classes.root} variant="outlined">
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          First, Last Name
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Individual Rating
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+        <Box component="fieldset" mb={3} borderColor="transparent">
+            <Rating
+            name="read-only"
+            size="large"
+            value={value} readOnly
+            />
+          </Box>
+        </Typography>
+        <Typography variant="body2" component="p">
+          This person is great at backend. 
+        </Typography>
+      </CardContent>
+    </Card>
+
+    <br />
+
+    <Card>
+    <CardContent className={classes.root} variant="outlined">
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          First, Last Name
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Team 2 Rating
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+        <Box component="fieldset" mb={3} borderColor="transparent">
+            <Rating
+            name="read-only"
+            size="large"
+            value={value} readOnly
+            />
+          </Box>
+        </Typography>
+        <Typography variant="body2" component="p">
+          They are very organized and punctual.
+        </Typography>
+      </CardContent>
+    </Card>
+
+  </div>
+
 
     
   );

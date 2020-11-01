@@ -38,8 +38,8 @@ const useStyles = makeStyles({
     backgroundColor: '#ffffff',
     color: '#000000',
     "&:hover": {
-      backgroundColor: '#007a50',
-      color: '#ffffff',
+      backgroundColor: '#ffffff',
+      color: '#007a50',
     }
   },
 });

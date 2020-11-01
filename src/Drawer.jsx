@@ -13,6 +13,7 @@ import GroupIcon from '@material-ui/icons/Group';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import GradeIcon from '@material-ui/icons/Grade';
 import AccountBoxRoundedIcon from '@material-ui/icons/AccountBoxRounded';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
   drawer: {
@@ -32,7 +33,15 @@ const useStyles = makeStyles({
     '& div:first-child ': {
       minWidth: '35px'
     },
-  }
+  },
+  signOut: {
+    backgroundColor: '#ffffff',
+    color: '#000000',
+    "&:hover": {
+      backgroundColor: '#007a50',
+      color: '#ffffff',
+    }
+  },
 });
 
 const Drawer = props => {
@@ -78,6 +87,11 @@ const Drawer = props => {
             </ListItem>
           );
         })}
+        <ListItem>
+          <Button className={classes.signOut} variant="contained" color="primary" disableElevation>
+            Sign Out
+          </Button>
+        </ListItem>
       </List>
     </MUIDrawer>
   );

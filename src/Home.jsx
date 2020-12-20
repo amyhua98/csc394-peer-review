@@ -29,14 +29,14 @@ const useStyles = makeStyles({
     marginRight: 15,
   },
   title: {
-    fontSize: 25,
+    fontSize: 24,
     textAlign: 'center',
     color: '#000000',
     marginTop: '40px',
     fontWeight: 'bold',
   },
   headers: {
-    fontSize: 25,
+    fontSize: 24,
     textAlign: 'left',
     color: '#007a50',
     marginTop: '40px',

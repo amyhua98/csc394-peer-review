@@ -59,9 +59,7 @@ const useStyles = makeStyles({
     width: '75%'
   },
   textbox: {
-    "&:onClick": {
-      border: '#007a50',
-    }
+    outline: '#007a50',
   }
 });
 
